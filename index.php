@@ -4,8 +4,10 @@
   <!-- <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/library-hero.jpg') ?>);"></div> -->
   <div class="page-banner__bg-image" style="background-image: radial-gradient(at center center,rgba(247,225,50,.84) 0%,#F7A418 100%)"></div>
     <div class="page-banner__content container t-center c-white">
-      <h1 class="headline headline--large"><img src="https://hellocannabis.ca/wp-content/uploads/2020/03/Frame.png" /></h1>
-<img style="width: 30%; margin-top: 5vh" src="https://hellocannabis.ca/wp-content/uploads/2020/03/preloader-logo.svg" /><br />
+      <h1 class="headline headline--large"><img style="width:30vh" src="<?php echo get_theme_file_uri('/images/weed.png') ?>" /></h1>
+      <p style=" font-size: 10vh; letter-spacing: 8px; color: black; font-weight:bold; margin-bottom: -12px; line-height:1">Indica</p><br />
+      <h2 style="margin:0; font-size: 9vh; letter-spacing: 9px; font-weight:lighter; color: black; line-height:1">Theme</h2>
+<!-- <img style="width: 30%; margin-top: 5vh" src="https://hellocannabis.ca/wp-content/uploads/2020/03/preloader-logo.svg" /><br /> -->
       <a style="margin-top: 10vh; text-decoration: none" href="#" class="fl-button">Visit us ></a>
     </div>
   </div>
