@@ -1630,8 +1630,12 @@ License: created for Black Hawk Digital
   .main-navigation a:hover {
     color: #FAF0CA;
   }
-  
   .page-banner {
+    background-color: #000;
+    padding: 80px 0 40px 0;
+    position: relative;
+  }
+  .frontpage-banner {
     /* background-color: #000; */
     padding: 80px 0 40px 0;
     position: relative;

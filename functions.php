@@ -11,4 +11,24 @@ function indica_files(){
 
 add_action('wp_enqueue_scripts','indica_files');
 
+// add title
+function indica_features(){
+    add_theme_support('title-tag');
+}
+add_action('after_setup_theme','indica_features');
+
+// custom type
+function indica_post_types(){
+    register_post_type('education', array(
+        'public'=>true,
+        'labels'=>array(
+            'name'=>'Education'
+        ),
+        'menu_icon'=>'dashicons-welcome-learn-more',
+        ''=>'',
+    ));
+};
+
+add_action('init','indica_post_types');
+
 ?>
