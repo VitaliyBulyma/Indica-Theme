@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
   <div class="frontpage-banner">
+    
   <!-- <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/library-hero.jpg') ?>);"></div> -->
   <div class="page-banner__bg-image" style="background-image: radial-gradient(at center center,rgba(247,225,50,.84) 0%,#F7A418 100%)"></div>
     <div class="page-banner__content container t-center c-white">
@@ -10,6 +11,7 @@
 <!-- <img style="width: 30%; margin-top: 5vh" src="https://hellocannabis.ca/wp-content/uploads/2020/03/preloader-logo.svg" /><br /> -->
       <a style="margin-top: 10vh; text-decoration: none" href="#" class="fl-button">Visit us ></a>
     </div>
+   
   </div>
 
   <div class="full-width-split group">
