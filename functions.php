@@ -17,18 +17,6 @@ function indica_features(){
 }
 add_action('after_setup_theme','indica_features');
 
-// custom type
-function indica_post_types(){
-    register_post_type('education', array(
-        'public'=>true,
-        'labels'=>array(
-            'name'=>'Education'
-        ),
-        'menu_icon'=>'dashicons-welcome-learn-more',
-        ''=>'',
-    ));
-};
 
-add_action('init','indica_post_types');
 
 ?>
