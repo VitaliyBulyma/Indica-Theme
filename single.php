@@ -22,7 +22,8 @@ while (have_posts()){
       <div class="generic-content"><?php the_content(); ?></div>
 
 
-</div>  
+</div>
+  </div>  
 <?php }
 get_footer();
 ?>

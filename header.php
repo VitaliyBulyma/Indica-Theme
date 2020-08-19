@@ -16,7 +16,7 @@
           <ul class="min-list group">
             <li><a href="#">Live Menu</a></li>
             <li <?php if(is_page('about') or wp_get_post_parent_id(0)==15) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/about'); ?>">About</a></li>
-            <li><a href="#">Education</a></li>
+            <li><a href="<?php echo site_url('/education'); ?>">Education</a></li>
             <li><a href="#">Locations</a></li>            
             <li <?php if (get_post_type()== 'post') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>            
           </ul>
