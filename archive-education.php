@@ -7,8 +7,8 @@ get_header(); ?>
   <div class="page-banner__content container container--narrow">
     <h1 class="page-banner__title"><?php the_archive_title(); ?></h1>
     <div class="page-banner__intro">
-      <p><?php the_archive_description(); ?></p>
-      <p>Powered by archive.php</p>
+      <p style="color: black">This is custom archive</p>
+      <p style="color: black">Powered by archive-education.php</p>
     </div>
   </div>  
 </div>
@@ -33,6 +33,8 @@ get_header(); ?>
   <?php }
   echo paginate_links();
 ?>
+<hr class="section-brake"/>
+<p>Looking for past events? <a href="<?php echo site_url('/past-events') ?>">Click here</a></p>
 </div>
 
 <?php get_footer();

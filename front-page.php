@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
   <div class="frontpage-banner">
+    
   <!-- <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/library-hero.jpg') ?>);"></div> -->
   <div class="page-banner__bg-image" style="background-image: radial-gradient(at center center,rgba(247,225,50,.84) 0%,#F7A418 100%)"></div>
     <div class="page-banner__content container t-center c-white">
@@ -10,6 +11,7 @@
 <!-- <img style="width: 30%; margin-top: 5vh" src="https://hellocannabis.ca/wp-content/uploads/2020/03/preloader-logo.svg" /><br /> -->
       <a style="margin-top: 10vh; text-decoration: none" href="#" class="fl-button">Visit us ></a>
     </div>
+   
   </div>
 
   <div class="full-width-split group">
@@ -17,10 +19,21 @@
       <div class="full-width-split__inner">
         <h2 class="headline headline--small-plus t-center">Education</h2>
         <?php
+        $today = date('Y/m/d');
           $homepageEd = new WP_Query(array(
             'posts_per_page'=>2,
             'post_type'=>'education',
-            ''=>'',
+            'meta_key'=>'event_date',
+            'orderby'=>'meta_value_num',
+            'order'=>'ASC',
+            'meta_query'=> array(
+              array(
+                'key'=> 'event_date',
+                'compare'=>'>=',
+                'value' => $today,
+                'type'=> 'date' 
+              )
+            )
           ));
 
           while($homepageEd->have_posts()){
@@ -28,8 +41,13 @@
 
         <div class="event-summary">
           <a class="event-summary__date t-center" href="#">
-            <span class="event-summary__month">Mar</span>
-            <span class="event-summary__day">25</span>  
+            <span class="event-summary__month">
+            <?php 
+            $eventDate = new DateTime(get_field('event_date'));
+            echo $eventDate->format('M')
+            
+            ?></span>
+            <span class="event-summary__day"><?php echo $eventDate->format('d')?></span>  
           </a>
           <div class="event-summary__content">
             <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
@@ -43,7 +61,7 @@
 
 
         
-        <p class="t-center no-margin"><a href="#" class="btn btn--blue">View All Events</a></p>
+        <p class="t-center no-margin"><a href="<?php echo get_post_type_archive_link('education'); ?>" class="btn btn--blue">View All Education</a></p>
 
       </div>
     </div>
